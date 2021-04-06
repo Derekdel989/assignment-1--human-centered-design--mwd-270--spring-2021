@@ -3,61 +3,97 @@
 <head>
 	<title>Registration Form</title>
 	<link rel="stylesheet" href="css/style.css">
+	
 </head>
 <body>
-	<script src="js/app.js"></script>
 	<header>
 		<h1>Registration Form</h1>
 	</header>
 	<main>
 		<form>
-			<p><label for="first-name">Please enter your first name: </label><input type="text" autofocus name="first-name" placeholder="ex: Derek"id="first-name"></p>
+			
+			<p><label for="first-name">Please enter your first name: </label><input type="text" autofocus name="first-name" placeholder="Enter First Name"id="first-name"></p>
+			
+				<br>
+
+			<p><label for="last-name">Please enter your last name: </label><input type="text" name="last-name" placeholder="Enter Last Name" required id="last-name"></p>
 				
 				<br>
 
-			<p><label for="last-name">Please enter your last name: </label><input type="text" name="last-name" placeholder="ex: Delgado"id="last-name"></p>
+			<p><label for="address">Please enter you address: </label><input type="text" name="address" placeholder="ex: 12 Apple Street" required id="address"></p>
 				
 				<br>
 
-			<p><label for="address">Please enter you address: </label><input type="text" name="address" placeholder="ex: 12 Apple Street" id="address"></p>
+			<p><label for="city">Please enter you city: </label><input type="text" name="city" placeholder="ex: Hartford" required id="city"></p>
 				
 				<br>
 
-			<p><label for="city">Please enter you city: </label><input type="text" name="city" placeholder="ex: Hartford" id="city"></p>
+			<p><label for="state">Please enter you state: </label><input type="text" name="state" placeholder="ex: Connecticut" required id="state"></p>
 				
 				<br>
 
-			<p><label for="state">Please enter you state: </label><input type="text" name="state" placeholder="ex: Connecticut" id="state"></p>
+			<p><label for="yearly-salary">Please enter your desired yearly salary: </label><input type="tele" name="yearly-salary" placeholder="ex: $25,000" required id="yearly-salary" pattern="\$[0-9]{2}\[,][0-9]{3}"></p>
 				
 				<br>
 
-			<p><label for="yearly-salary">Please enter your desired yearly salary: </label><input type="tele" name="yearly-salary" placeholder="ex: $25,000"id="yearly-salary" pattern="\$[0-9]{2}\[,][0-9]{3}"></p>
+			<p><label for="zip-code">Please enter your zip code: </label><input type="tele" name="zip-code" placeholder="ex: 06106" required id="zip-code" pattern="[0-9]{5}"></p>
 				
 				<br>
 
-			<p><label for="zip-code">Please enter your zip code: </label><input type="tele" name="zip-code" placeholder="ex: 06106"id="zip-code" pattern="[0-9]{5}"></p>
+			<p><label for="tele-number">Please enter your telephone number: </label><input type="tel" name="tele-number" placeholder="ex: (860)-222-3333" required id="tele-number" pattern="\([0-9]{3}\)[-][0-9]{3}[-][0-9]{4}"></p>
 				
 				<br>
 
-			<p><label for="tele-number">Please enter your telephone number: </label><input type="tel" name="tele-number" placeholder="ex: (860)-222-3333" id="tele-number" pattern="\([0-9]{3}\)[-][0-9]{3}[-][0-9]{4}"></p>
+			<p><label for="month">Please choose a month to come: </label><input type="month" name="month" required id="month"></p>
 				
 				<br>
 
-			<p><label for="month">Please choose a month to come: </label><input type="month" name="month" id="month"></p>
-				
 				<br>
 
-			<p><label for="day">Please choose a day to come: </label><input type="day" name="day" id="day"></p>
-				
-				<br>
+			<label> Please choose a day to come: </label>
+			<select required>
+				<option value="0">--Select--</option>
+				<option value="1"> Monday </option>
+				<option value="2"> Tuesday </option>
+				<option value="3"> Wednesday </option>
+				<option value="4"> Thursday </option>
+				<option value="5"> Friday </option>
+				<option value="6"> Saturday </option>
+				<option value="7"> Sunday </option>
+			</select>
 
-			<p><label for="time">Please choose a time to come: </label><input type="time" name="time" id="time"></p>
+			<br>
 
-				<br>
+			<br>
 
-			<p><label for="relocate"> Are you willing to relocate nationally, internationally, none or both?</label><input type="text" name="relocate" id="relocate"></p>
+			<p><label for="time">Please choose a time to come: </label><input type="time" name="time" id="time" required></p>
 
-			<input type="submit" value="Submit">
+			<br>
+
+			<label> Are you willing to relocate nationally or internationally?</label>
+
+			<br>
+
+			<input type="radio" name="Relocate" value="Nationally" required>
+			<label>Nationally</label>
+
+			<br>
+
+            <input type="radio" name="Relocate" value="Internationally">
+            <label>Internationally</label>
+
+            <br>
+
+            <input type="radio" name="Relocate" value="Not Interested">
+            <label>Not Interested</label>
+
+            <br>
+            <br>
+
+			<input type="submit" value="Submit" class="SubmitButton">
+
+			<input type="reset" value="Reset" class="ResetButton">
+
 		</form>
 	</main>
 </body>
